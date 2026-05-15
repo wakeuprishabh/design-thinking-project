@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -218,6 +217,15 @@
       line-height:2;
       color:#d1d1d1;
       padding-left:20px;
+      list-style-type: none; /* Changed to match the dash style of the image */
+    }
+
+    /* Custom bullet points to match the design */
+    ul li::before {
+      content: "- ";
+      color: #ff4db8; /* Match theme color */
+      margin-left: -15px;
+      margin-right: 5px;
     }
 
     footer{
@@ -300,6 +308,44 @@
       </p>
     </div>
 
+    <section class="why-important" style="padding: 120px 0 0 0;">
+  <div class="container">
+    <h2 class="title">Why Is It Important?</h2>
+    <p style="text-align: center; color: #cccccc; max-width: 850px; margin: 0 auto 50px auto; line-height: 1.8; font-size: 1.1rem;">
+      Design thinking is important because it focuses on solving real-world problems
+      through creativity, empathy, and innovation. It helps individuals understand
+      user needs, generate effective ideas, and create meaningful solutions that
+      improve everyday experiences.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Human-Centered Solutions</h3>
+        <p>
+          Encourages understanding people’s needs before creating solutions,
+          leading to better and more impactful outcomes.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Boosts Creativity</h3>
+        <p>
+          Promotes brainstorming and innovative thinking to solve challenges
+          in unique and effective ways.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Improves Problem Solving</h3>
+        <p>
+          Helps break down complex problems into manageable steps and test
+          ideas before implementation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
   </section>
 
   <section id="team">
@@ -350,34 +396,93 @@
 
   <section id="problem">
 
-    <h2 class="title">Problem</h2>
+    <h2 class="title">Problem Statement Canvas</h2>
+    
+    <p style="text-align: center; color: #cccccc; max-width: 850px; margin: 0 auto 50px auto; line-height: 1.8; font-size: 1.1rem;">
+      Using the integrated design thinking framework, we mapped our user, their context, pain points, root causes, 
+      and the scale of impact to arrive at a clear, actionable problem definition.
+    </p>
 
     <div class="cards">
 
       <div class="card">
-        <h3>Algorithmic Echo-Chambers</h3>
-        <p>
-          Social media platforms prioritize engagement over accuracy,
-          reinforcing bias, misinformation, and emotional manipulation.
-        </p>
+        <h3>USER / PROTAGONIST</h3>
+        <ul>
+          <li>Young adults aged 18–25</li>
+          <li>Heavy social media users</li>
+          <li>Platforms: Instagram, X/Twitter, TikTok, WhatsApp, YouTube</li>
+          <li>Consume news quickly, struggle to verify before sharing</li>
+        </ul>
       </div>
 
       <div class="card">
-        <h3>Deepfake & AI Misinformation</h3>
-        <p>
-          Users struggle to identify synthetic media and fake AI-generated
-          content before it spreads online.
-        </p>
+        <h3>CONTEXT & SITUATION</h3>
+        <ul>
+          <li>Viral or trending posts</li>
+          <li>Breaking news events</li>
+          <li>Emotionally charged headlines</li>
+          <li>AI-generated videos, images, text</li>
+          <li>Peer pressure to stay updated</li>
+          <li>Fast-paced digital environment</li>
+        </ul>
       </div>
 
       <div class="card">
-        <h3>Data Exploitation</h3>
-        <p>
-          Platforms collect user data invisibly and create psychological
-          profiles without meaningful transparency.
-        </p>
+        <h3>EVIDENCE BASE</h3>
+        <ul>
+          <li>Users trust viral posts due to share count</li>
+          <li>Most do not verify before reposting</li>
+          <li>Fact-checking seen as time-consuming</li>
+          <li>AI-generated content harder to detect</li>
+          <li>Empathy mapping & user journey research</li>
+        </ul>
       </div>
 
+      <div class="card">
+        <h3>PAIN POINTS & NEEDS</h3>
+        <ul>
+          <li>Difficulty identifying trustworthy information</li>
+          <li>Lack of quick verification tools</li>
+          <li>AI-generated media increasingly realistic</li>
+          <li>Information overload from multiple platforms</li>
+          <li>Fear of sharing fake information publicly</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>ROOT CAUSES (5 WHYS)</h3>
+        <ul>
+          <li>Social media prioritizes engagement over accuracy</li>
+          <li>Users consume information too quickly</li>
+          <li>Fact-checking tools are disconnected from browsing</li>
+          <li>Emotional headlines encourage impulsive reactions</li>
+          <li>Social pressure encourages rapid reposting</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>IMPACT & SCALE</h3>
+        <ul>
+          <li>Rapid spread of misinformation</li>
+          <li>Public confusion and panic</li>
+          <li>Manipulation of opinions</li>
+          <li>Loss of trust in news</li>
+          <li>Damage to personal credibility</li>
+          <li>Increased polarization and distrust</li>
+        </ul>
+      </div>
+
+    </div>
+    
+    <div class="card" style="margin-top: 30px; border-color: rgba(255,255,255,0.2);">
+      <h4 style="color: white; margin-bottom: 10px; font-weight: 500;">Point of View Statement:</h4>
+      <p style="font-size: 1.05rem;">
+        <span style="color: #6495ED; font-weight: 500;">A social media user who relies on online platforms for news</span> 
+        <span style="color: #ff4db8;">needs to</span> 
+        <span style="color: #FFD700; font-weight: 500;">have a fast, simple, and trustworthy way to verify information before sharing it</span> 
+        <span style="color: #DDA0DD;">because</span> 
+        <span style="color: #98FB98; font-weight: 500;">they want to stay informed quickly without accidentally spreading misinformation or damaging their credibility.</span>
+      </p>
     </div>
 
   </section>
@@ -418,7 +523,7 @@
 
     <h2 class="title">Interviews</h2>
 
-    <div class="cards">
+    <div class="cards-grid-4">
 
       <div class="card">
         <h3>User Insight 01</h3>
@@ -441,6 +546,41 @@
         <p>
           “Social media affects my confidence because I constantly compare
           myself to others online.”
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>User Insight 04</h3>
+        <p>
+          “I feel overwhelmed by the constant stream of negative news, but I can't seem to look away.”
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>User Insight 05</h3>
+        <p>
+          “I want to verify facts before sharing, but finding reliable sources usually takes too much time.”
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>User Insight 06</h3>
+        <p>
+          “I get anxious when I don't check my notifications immediately; it constantly feels like I'm missing out.”
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>User Insight 07</h3>
+        <p>
+          “It feels like the algorithm only shows me extreme viewpoints or things that make me angry to keep me engaged.”
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>User Insight 08</h3>
+        <p>
+          “I hesitate to post my real opinions because I fear being judged, misunderstood, or harassed by strangers.”
         </p>
       </div>
 
@@ -575,4 +715,3 @@
 </body>
 
 </html>
-
