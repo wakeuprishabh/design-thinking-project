@@ -1,9 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Digital Integrity & Intellectual Ethics</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
 
@@ -11,139 +19,157 @@
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family:Arial, sans-serif;
+      font-family:'Poppins',sans-serif;
       scroll-behavior:smooth;
     }
 
     body{
-      background:#000;
+      background:#050505;
       color:white;
       overflow-x:hidden;
     }
 
+    body::before{
+      content:'';
+      position:fixed;
+      width:600px;
+      height:600px;
+      background:#ff149340;
+      filter:blur(120px);
+      top:-200px;
+      right:-100px;
+      z-index:-1;
+    }
+
+    body::after{
+      content:'';
+      position:fixed;
+      width:500px;
+      height:500px;
+      background:#ff69b430;
+      filter:blur(120px);
+      bottom:-200px;
+      left:-100px;
+      z-index:-1;
+    }
+
     nav{
       position:fixed;
-      top:0;
-      width:100%;
-      padding:20px;
-      background:rgba(0,0,0,0.7);
-      backdrop-filter:blur(10px);
+      top:20px;
+      left:50%;
+      transform:translateX(-50%);
+      width:92%;
+      padding:18px 20px;
       display:flex;
       justify-content:center;
-      gap:40px;
+      flex-wrap:wrap;
+      gap:25px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      backdrop-filter:blur(15px);
+      border-radius:20px;
       z-index:1000;
     }
 
     nav a{
       color:white;
       text-decoration:none;
-      font-weight:bold;
       transition:0.3s;
+      font-weight:500;
+      font-size:0.95rem;
     }
 
     nav a:hover{
-      color:#ff1493;
+      color:#ff4db8;
     }
 
     header{
-      height:100vh;
+      min-height:100vh;
       display:flex;
-      flex-direction:column;
       justify-content:center;
       align-items:center;
       text-align:center;
-      background:linear-gradient(135deg,#000,#14000f,#ff1493);
+      flex-direction:column;
       padding:20px;
     }
 
     header h1{
-      font-size:4.5rem;
-      color:#ff4db8;
-      text-shadow:0 0 20px #ff1493;
+      font-size:5rem;
+      max-width:1000px;
+      line-height:1.1;
+      background:linear-gradient(to right,#ff4db8,#ffffff);
+
+      background-clip:text;
+      -webkit-background-clip:text;
+
+      color:transparent;
+      -webkit-text-fill-color:transparent;
     }
 
     header p{
+      margin-top:25px;
+      color:#cccccc;
       max-width:850px;
-      margin-top:20px;
-      font-size:1.2rem;
-      color:#f5c2e7;
-      line-height:1.7;
+      line-height:1.8;
+      font-size:1.1rem;
     }
 
     .btn{
       margin-top:35px;
-      padding:15px 35px;
-      background:#ff1493;
-      color:white;
+      padding:15px 40px;
+      border-radius:50px;
+      background:linear-gradient(135deg,#ff1493,#ff4db8);
       text-decoration:none;
-      border-radius:40px;
+      color:white;
+      font-weight:600;
       transition:0.3s;
-      font-weight:bold;
     }
 
     .btn:hover{
-      transform:scale(1.05);
-      background:#ff4db8;
+      transform:translateY(-5px);
+      box-shadow:0 0 25px #ff149370;
     }
 
     section{
-      padding:100px 10%;
+      padding:120px 10%;
     }
 
     .title{
+      font-size:3rem;
+      margin-bottom:60px;
       text-align:center;
-      font-size:2.8rem;
       color:#ff4db8;
-      margin-bottom:50px;
-    }
-
-    .about{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:40px;
-      align-items:center;
-    }
-
-    .about img{
-      width:100%;
-      border-radius:20px;
-      box-shadow:0 0 30px rgba(255,20,147,0.4);
-    }
-
-    .about-text{
-      line-height:1.9;
-      color:#ddd;
-      font-size:1.1rem;
-    }
-
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:30px;
     }
 
     .card{
-      background:#111;
-      padding:30px;
-      border-radius:20px;
-      border:1px solid #ff1493;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      backdrop-filter:blur(15px);
+      padding:35px;
+      border-radius:25px;
       transition:0.4s;
-      box-shadow:0 0 15px rgba(255,20,147,0.15);
     }
 
     .card:hover{
       transform:translateY(-10px);
-      box-shadow:0 0 30px rgba(255,20,147,0.4);
+      border-color:#ff1493;
+      box-shadow:0 0 25px rgba(255,20,147,0.25);
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
     }
 
     .card h3{
       color:#ff4db8;
-      margin-bottom:15px;
+      margin-bottom:20px;
     }
 
     .card p{
-      color:#ccc;
-      line-height:1.7;
+      color:#d1d1d1;
+      line-height:1.8;
     }
 
     .team{
@@ -153,17 +179,18 @@
     }
 
     .member{
-      background:#111;
-      padding:25px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      backdrop-filter:blur(15px);
+      padding:30px;
+      border-radius:25px;
       text-align:center;
-      border-radius:20px;
-      border:1px solid #ff1493;
       transition:0.3s;
     }
 
     .member:hover{
-      transform:translateY(-8px);
-      box-shadow:0 0 25px rgba(255,20,147,0.4);
+      transform:translateY(-10px);
+      box-shadow:0 0 20px rgba(255,20,147,0.3);
     }
 
     .member img{
@@ -176,22 +203,29 @@
 
     .member h3{
       color:#ff4db8;
-      margin-bottom:8px;
+      margin-bottom:10px;
     }
 
     .journey-map{
       width:100%;
-      border-radius:20px;
-      border:2px solid #ff1493;
-      box-shadow:0 0 25px rgba(255,20,147,0.4);
+      border-radius:25px;
+      border:2px solid rgba(255,255,255,0.1);
+      box-shadow:0 0 20px rgba(255,20,147,0.2);
+    }
+
+    ul{
+      margin-top:20px;
+      line-height:2;
+      color:#d1d1d1;
+      padding-left:20px;
     }
 
     footer{
-      background:#0d0d0d;
+      padding:40px;
       text-align:center;
-      padding:30px;
-      border-top:1px solid #ff1493;
-      color:#aaa;
+      color:#999;
+      border-top:1px solid rgba(255,255,255,0.08);
+      margin-top:50px;
     }
 
     @media(max-width:900px){
@@ -200,133 +234,147 @@
         font-size:3rem;
       }
 
-      .about{
-        grid-template-columns:1fr;
-      }
-
       nav{
         gap:15px;
-        font-size:0.9rem;
+        padding:15px;
+      }
+
+      nav a{
+        font-size:0.8rem;
+      }
+
+      .title{
+        font-size:2.2rem;
       }
 
     }
 
   </style>
+
 </head>
 
 <body>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#problems">Problems</a>
-    <a href="#ideas">Ideas</a>
-    <a href="#journey">Journey Map</a>
+    <a href="#mission">Mission</a>
     <a href="#team">Team</a>
+    <a href="#problem">Problem</a>
+    <a href="#research">Research</a>
+    <a href="#journey">Journey</a>
+    <a href="#interviews">Interviews</a>
+    <a href="#reflections">Reflections</a>
+    <a href="#hmw">HMW</a>
+    <a href="#ideation">Ideation</a>
+    <a href="#solution">Solution</a>
   </nav>
 
   <header>
 
-    <h1>DIGITAL INTEGRITY & INTELLECTUAL ETHICS</h1>
+    <h1>
+      Rethinking Social Media:
+       A Design Thinking Approach <br>
+      
+    </h1>
 
     <p>
-      Exploring the ethical challenges of AI, social media algorithms,
-      privacy, misinformation, academic honesty, and digital identity in
-      a rapidly evolving technological world.
+      Tracing the roots of digital exhaustion, distraction, and the loss of safety. 
     </p>
 
-    <a href="#about" class="btn">Explore Project</a>
+    <a href="#mission" class="btn">
+      Explore Project
+    </a>
 
   </header>
 
-  <section id="about">
+  <section id="mission">
 
-    <h2 class="title">Project Overview</h2>
+    <h2 class="title">Mission</h2>
 
-    <div class="about">
+    <div class="card">
+      <p>
+        Our mission is to explore the ethical and emotional impact of
+        social media platforms and AI-driven systems on users. Through
+        empathy-based research, we aim to design transparent,
+        human-centered, and ethical digital experiences that promote
+        trust, safety, and digital well-being.
+      </p>
+    </div>
 
-      <img src="01.jpg" alt="Project Review Image">
+  </section>
 
-      <div class="about-text">
+  <section id="team">
 
-        <p>
-          This project focuses on understanding the problems faced by users
-          while interacting with social media platforms and AI-driven systems.
-        </p>
+    <h2 class="title">Team</h2>
 
-        <br>
+    <div class="team">
 
-        <p>
-          Through anonymous interviews and empathy mapping, we analyzed how
-          misinformation, comparison culture, emotional manipulation, privacy
-          concerns, and AI-generated content affect users emotionally,
-          mentally, and socially.
-        </p>
+      <div class="member">
+        <img src="https://placehold.co/120x120/ff1493/000000?text=VM" alt="">
+        <h3>VM</h3>
+        <p>Research & Analysis</p>
+      </div>
 
-        <br>
+      <div class="member">
+        <img src="https://placehold.co/120x120/ff1493/000000?text=MN" alt="">
+        <h3>MN</h3>
+        <p>UI/UX Design</p>
+      </div>
 
-        <p>
-          Our goal is to design ethical, transparent, and human-centered
-          digital solutions that improve trust, safety, and accountability
-          online.
-        </p>
+      <div class="member">
+        <img src="https://placehold.co/120x120/ff1493/000000?text=RN" alt="">
+        <h3>RN</h3>
+        <p>Frontend Development</p>
+      </div>
 
+      <div class="member">
+        <img src="https://placehold.co/120x120/ff1493/000000?text=NV" alt="">
+        <h3>NV</h3>
+        <p>Research Support</p>
+      </div>
+
+      <div class="member">
+        <img src="https://placehold.co/120x120/ff1493/000000?text=AS" alt="">
+        <h3>AS</h3>
+        <p>Documentation</p>
+      </div>
+
+      <div class="member">
+        <img src="https://placehold.co/120x120/ff1493/000000?text=AK" alt="">
+        <h3>AK</h3>
+        <p>Presentation Design</p>
       </div>
 
     </div>
 
   </section>
 
-  <section id="problems">
+  <section id="problem">
 
-    <h2 class="title">Problems Identified</h2>
+    <h2 class="title">Problem</h2>
 
     <div class="cards">
 
       <div class="card">
-        <h3>Algorithmic Echo-Chamber</h3>
+        <h3>Algorithmic Echo-Chambers</h3>
         <p>
-          Social media algorithms prioritize engagement over truth,
-          limiting perspectives and spreading misinformation.
+          Social media platforms prioritize engagement over accuracy,
+          reinforcing bias, misinformation, and emotional manipulation.
         </p>
       </div>
 
       <div class="card">
-        <h3>Deepfake & Synthetic Media</h3>
+        <h3>Deepfake & AI Misinformation</h3>
         <p>
-          Users unknowingly share AI-generated fake media that spreads
-          misinformation rapidly before verification.
+          Users struggle to identify synthetic media and fake AI-generated
+          content before it spreads online.
         </p>
       </div>
 
       <div class="card">
-        <h3>AI Transparency Gap</h3>
+        <h3>Data Exploitation</h3>
         <p>
-          Students increasingly rely on AI tools without understanding
-          the learning process or ethical implications.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Invisible Data Harvest</h3>
-        <p>
-          Platforms collect and infer behavioral data without users fully
-          understanding how they are being profiled.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Attention Economy Exploitation</h3>
-        <p>
-          Platforms amplify emotionally triggering content to maximize
-          engagement and screen time.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Synthetic Identity Crisis</h3>
-        <p>
-          AI-generated personas manipulate online communities while hiding
-          behind fake identities.
+          Platforms collect user data invisibly and create psychological
+          profiles without meaningful transparency.
         </p>
       </div>
 
@@ -334,59 +382,25 @@
 
   </section>
 
-  <section id="ideas">
+  <section id="research">
 
-    <h2 class="title">Proposed Solutions</h2>
+    <h2 class="title">Research</h2>
 
-    <div class="cards">
+    <div class="card">
 
-      <div class="card">
-        <h3>Bias Radar</h3>
-        <p>
-          A smart social feed assistant that alerts users when algorithms
-          narrow perspectives or reinforce bias.
-        </p>
-      </div>
+      <p>
+        We conducted anonymous interviews with social media users across
+        different age groups to understand emotional, ethical, and
+        behavioral challenges related to digital platforms.
+      </p>
 
-      <div class="card">
-        <h3>Verification-First Plugin</h3>
-        <p>
-          Browser extension that flags unlabeled AI-generated content before
-          users share it online.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Live Data Mirror</h3>
-        <p>
-          Real-time transparency tool showing users what AI systems infer
-          about them from online activity.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Digital Authenticity Seal</h3>
-        <p>
-          Verification system for academic and institutional media to prevent
-          fake recordings and misinformation.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Emotional Impact Indicator</h3>
-        <p>
-          Detects emotionally manipulative content designed for outrage rather
-          than useful information.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Proof-of-Personhood</h3>
-        <p>
-          Human verification framework that confirms authenticity without
-          exposing personal private data.
-        </p>
-      </div>
+      <ul>
+        <li>Increased stress and anxiety from comparison culture</li>
+        <li>Difficulty identifying misinformation and fake content</li>
+        <li>Fear of missing out and addiction to notifications</li>
+        <li>Concerns about privacy and digital safety</li>
+        <li>Emotional exhaustion from constant online engagement</li>
+      </ul>
 
     </div>
 
@@ -394,53 +408,161 @@
 
   <section id="journey">
 
-    <h2 class="title">Journey & Empathy Map</h2>
+    <h2 class="title">Journey</h2>
 
-    <img
-      class="journey-map"
-      src="journey map.jpeg"
-      alt="Journey Map"
-    >
+    <img class="journey-map" src="journey map.jpeg" alt="Journey Map">
 
   </section>
 
-  <section id="team">
+  <section id="interviews">
 
-    <h2 class="title">Our Team</h2>
+    <h2 class="title">Interviews</h2>
 
-    <div class="team">
+    <div class="cards">
 
-      <div class="member">
-        <img src="https://placehold.co/120x120/ff1493/000000?text=VM" alt="">
-        <h3>Varun Mahipal</h3>
-        <p>Team member</p>
+      <div class="card">
+        <h3>User Insight 01</h3>
+        <p>
+          “I often open social media just for a few minutes, but end up
+          scrolling for hours without realizing it.”
+        </p>
       </div>
 
-      <div class="member">
-        <img src="https://placehold.co/120x120/ff1493/000000?text=MN" alt="">
-        <h3>Nikhil Vadali</h3>
-        <p>Team member <p>
+      <div class="card">
+        <h3>User Insight 02</h3>
+        <p>
+          “Sometimes I cannot tell whether content is real or AI-generated,
+          especially during trending events.”
+        </p>
       </div>
 
-      <div class="member">
-        <img src="https://placehold.co/120x120/ff1493/000000?text=RN" alt="">
-        <h3>Rishabh Nair</h3>
-        <p>Team member</p>
+      <div class="card">
+        <h3>User Insight 03</h3>
+        <p>
+          “Social media affects my confidence because I constantly compare
+          myself to others online.”
+        </p>
       </div>
 
-      <div class="member">
-        <img src="https://placehold.co/120x120/ff1493/000000?text=NV" alt="">
-        <h3>Ashish Simhadri </h3>
-        <p>Team member</p>
+    </div>
+
+  </section>
+
+  <section id="reflections">
+
+    <h2 class="title">Reflections</h2>
+
+    <div class="card">
+
+      <p>
+        The research revealed that social media problems are not only
+        technological but deeply emotional and psychological.
+      </p>
+
+      <br>
+
+      <p>
+        Users desire transparency, healthier engagement systems,
+        emotional safety, and better tools for identifying misinformation.
+      </p>
+
+      <br>
+
+      <p>
+        Ethical digital experiences should prioritize user well-being over
+        engagement metrics.
+      </p>
+
+    </div>
+
+  </section>
+
+  <section id="hmw">
+
+    <h2 class="title">How Might We?</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>HMW 01</h3>
+        <p>
+          How might we help users identify biased or manipulative content
+          on social media platforms?
+        </p>
       </div>
 
-      <div class="member">
-        <img src="https://placehold.co/120x120/ff1493/000000?text=AS" alt="">
-        <h3>Adithya Kumar</h3>
-        <p>Team member</p>
+      <div class="card">
+        <h3>HMW 02</h3>
+        <p>
+          How might we reduce emotional overload caused by algorithmic
+          engagement systems?
+        </p>
       </div>
 
-    
+      <div class="card">
+        <h3>HMW 03</h3>
+        <p>
+          How might we create transparent systems that reveal how user data
+          is being collected and used?
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="ideation">
+
+    <h2 class="title">Ideation</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Bias Radar</h3>
+        <p>
+          Detects algorithmic narrowing and encourages exposure to
+          diverse viewpoints.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Emotional Impact Indicator</h3>
+        <p>
+          Warns users when content is emotionally manipulative or designed
+          for outrage.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Live Data Mirror</h3>
+        <p>
+          Shows users what AI systems infer about them based on their
+          digital behavior.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="solution">
+
+    <h2 class="title">Solution</h2>
+
+    <div class="card">
+
+      <p>
+        Our proposed solution combines transparency tools, emotional
+        well-being indicators, and misinformation detection systems into
+        a user-centered digital safety platform.
+      </p>
+
+      <ul>
+        <li>Identify misinformation and AI-generated content</li>
+        <li>Understand emotional manipulation in feeds</li>
+        <li>Monitor how personal data is being inferred</li>
+        <li>Build healthier digital engagement habits</li>
+      </ul>
 
     </div>
 
@@ -451,5 +573,6 @@
   </footer>
 
 </body>
+
 </html>
 
