@@ -217,13 +217,12 @@
       line-height:2;
       color:#d1d1d1;
       padding-left:20px;
-      list-style-type: none; /* Changed to match the dash style of the image */
+      list-style-type: none;
     }
 
-    /* Custom bullet points to match the design */
     ul li::before {
       content: "- ";
-      color: #ff4db8; /* Match theme color */
+      color: #ff4db8;
       margin-left: -15px;
       margin-right: 5px;
     }
@@ -234,6 +233,24 @@
       color:#999;
       border-top:1px solid rgba(255,255,255,0.08);
       margin-top:50px;
+    }
+
+    .cards-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    @media(max-width: 1200px) {
+      .cards-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width: 768px) {
+      .cards-grid-4 {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media(max-width:900px){
@@ -268,12 +285,12 @@
     <a href="#team">Team</a>
     <a href="#problem">Problem</a>
     <a href="#research">Research</a>
-    <a href="#journey">Journey</a>
     <a href="#interviews">Interviews</a>
-    <a href="#reflections">Reflections</a>
+    <a href="#journey">Journey</a>
     <a href="#hmw">HMW</a>
     <a href="#ideation">Ideation</a>
     <a href="#solution">Solution</a>
+    <a href="#reflections">Reflections</a>
   </nav>
 
   <header>
@@ -356,39 +373,35 @@
 
       <div class="member">
         <img src="https://placehold.co/120x120/ff1493/000000?text=VM" alt="">
-        <h3>VM</h3>
-        <p>Research & Analysis</p>
+        <h3>Varun Mahipal</h3>
+        
       </div>
 
       <div class="member">
         <img src="https://placehold.co/120x120/ff1493/000000?text=MN" alt="">
-        <h3>MN</h3>
-        <p>UI/UX Design</p>
+        <h3>Rishabh Nair</h3>
+        
       </div>
 
       <div class="member">
         <img src="https://placehold.co/120x120/ff1493/000000?text=RN" alt="">
-        <h3>RN</h3>
-        <p>Frontend Development</p>
+        <h3>Nikhil Vadali</h3>
+        
       </div>
 
       <div class="member">
         <img src="https://placehold.co/120x120/ff1493/000000?text=NV" alt="">
-        <h3>NV</h3>
-        <p>Research Support</p>
+        <h3>Ashish Simhadri</h3>
+        
       </div>
 
       <div class="member">
         <img src="https://placehold.co/120x120/ff1493/000000?text=AS" alt="">
-        <h3>AS</h3>
-        <p>Documentation</p>
+        <h3>Adithya Kumar</h3>
+        
       </div>
 
-      <div class="member">
-        <img src="https://placehold.co/120x120/ff1493/000000?text=AK" alt="">
-        <h3>AK</h3>
-        <p>Presentation Design</p>
-      </div>
+      
 
     </div>
 
@@ -534,7 +547,8 @@
     </div>
 
   </section>
-    <section id="interviews">
+  
+  <section id="interviews">
 
     <h2 class="title">Interviews</h2>
 
@@ -611,10 +625,6 @@
 
   </section>
 
-
-
-  
-
   <section id="hmw">
 
     <h2 class="title">How Might We?</h2>
@@ -649,39 +659,7 @@
 
   </section>
 
-  <section id="ideation">
-
-    <h2 class="title">Ideation</h2>
-
-    <div class="cards">
-
-      <div class="card">
-        <h3>Bias Radar</h3>
-        <p>
-          Detects algorithmic narrowing and encourages exposure to
-          diverse viewpoints.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Emotional Impact Indicator</h3>
-        <p>
-          Warns users when content is emotionally manipulative or designed
-          for outrage.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Live Data Mirror</h3>
-        <p>
-          Shows users what AI systems infer about them based on their
-          digital behavior.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
+  
 
   <section id="solution">
 
@@ -740,8 +718,15 @@
       <div class="card">
         <h3>Meaningful Engagement Model</h3>
         <p>
-          Rather than rewarding passive scrolling, ReSocial
-<section id="reflections">
+          Rather than rewarding passive scrolling, ReSocial encourages thoughtful conversations, genuine social interaction, and quality engagement. The design promotes healthier digital habits by prioritising intentional communication.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="reflections">
 
     <h2 class="title">Reflections</h2>
 
