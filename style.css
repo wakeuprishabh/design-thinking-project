@@ -213,6 +213,25 @@ section {
     font-size: 0.9rem;
 }
 
+.cards-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    /* Responsive adjustments for smaller screens */
+    @media(max-width: 1200px) {
+      .cards-grid-4 {
+        grid-template-columns: repeat(2, 1fr); /* 2 in a row for tablets */
+      }
+    }
+
+    @media(max-width: 768px) {
+      .cards-grid-4 {
+        grid-template-columns: 1fr; /* 1 in a row for phones */
+      }
+    }
+
 /* Data List (Research) */
 .data-list {
     list-style: none;
