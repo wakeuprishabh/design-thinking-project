@@ -777,131 +777,89 @@
   </section>
  
 <section id="ideation">
-    <div class="bw-container">
-      
-      <div class="bw-left">
-        <span class="bw-phase">IDEATION PHASE</span>
-        <h2>6-3-5 Brainwriting Solutions</h2>
-        <p>
-          Using the 6-3-5 brainwriting method, we collaboratively generated six solution ideas for each of our HMW questions — producing concrete concepts.
-        </p>
-        <p>
-          The 6-3-5 method is a structured rapid ideation technique. Each HMW question receives six practical solution concepts built collaboratively by the team.
-        </p>
-        <p style="margin-top: 15px;">
-          Click any question below to explore the six ideas our team generated for that challenge.
-        </p>
-        <div class="bw-tag-btn">
-          <span>⚡</span> 6-3-5 Brainwriting
-        </div>
+
+    <h2 class="title">Ideation (6-3-5 Brainwriting)</h2>
+
+    <p style="text-align: center; color: #cccccc; max-width: 850px; margin: 0 auto 50px auto; line-height: 1.8; font-size: 1.1rem;">
+      Using the 6-3-5 brainwriting method, we collaboratively generated practical solution concepts for our core How Might We challenges.
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3 style="font-size: 1.1rem; line-height: 1.4;">01. How might we proactively detect and remove harmful accounts before users ever encounter them?</h3>
+        <ul style="font-size: 0.95rem;">
+          <li><strong>Behavioral Velocity AI:</strong> Flag accounts based on the inhuman speed of rapid-fire actions immediately upon creation.</li>
+          <li><strong>The 48-Hour Waiting Room:</strong> New accounts enter a mandatory shadow period where posts are vetted by AI.</li>
+          <li><strong>Cross-Platform Hashing:</strong> Share anonymized hashes of known threat actors across networks for internet-wide bans.</li>
+          <li><strong>Honeypot Accounts:</strong> Deploy invisible AI 'bot-traps'; interacting accounts are flagged as scrapers/spammers.</li>
+          <li><strong>Semantic Risk Scoring:</strong> Use NLP to analyze phrasing of first 5 posts/DMs; high-risk scores trigger review.</li>
+          <li><strong>Peer Sponsorship Activation:</strong> Accounts remain 'read-only' until an existing user 'sponsors' their entry.</li>
+        </ul>
       </div>
 
-      <div class="bw-right">
-        
-        <div class="accordion-item active">
-          <button class="accordion-header" onclick="toggleAccordion(this)">
-            01. How might we proactively detect and remove harmful accounts before users ever encounter them?
-            <span class="acc-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <div class="accordion-inner">
-              <div class="idea-box"><span class="arrow">→</span>Behavioral Velocity AI: Flag accounts based on the inhuman speed of rapid-fire actions (likes, DMs) immediately upon creation.</div>
-              <div class="idea-box"><span class="arrow">→</span>The 48-Hour Waiting Room: New accounts enter a mandatory 48-hour shadow period where their posts and comments are vetted by AI.</div>
-              <div class="idea-box"><span class="arrow">→</span>Cross-Platform Hashing: Share anonymized hashes of known threat actors across networks for simultaneous internet-wide bans.</div>
-              <div class="idea-box"><span class="arrow">→</span>Honeypot Accounts: Deploy invisible AI 'bot-trap' accounts; any new account that interacts with them is flagged as a scraper/spammer.</div>
-              <div class="idea-box"><span class="arrow">→</span>Semantic Risk Scoring: Use NLP to analyze the phrasing of a user’s first 5 posts or DMs; high-risk scores trigger immediate manual review.</div>
-              <div class="idea-box"><span class="arrow">→</span>Peer Sponsorship Activation: Accounts remain in 'read-only' mode until an existing, well-standing user clicks a link to 'sponsor' their entry.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)">
-            02. How might we transform safety controls from a reactive mechanism into a proactive system?
-            <span class="acc-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <div class="accordion-inner">
-              <div class="idea-box"><span class="arrow">→</span>Predictive DM Intercept: AI scans outbound messages for predatory patterns and blocks delivery before the recipient ever sees it.</div>
-              <div class="idea-box"><span class="arrow">→</span>Mandatory Boundary Onboarding: Users cannot access the feed until they explicitly complete a gamified privacy and trigger-warning setup.</div>
-              <div class="idea-box"><span class="arrow">→</span>Default-Off Culture: All accounts default to maximum privacy (no stranger DMs, no public visibility) until the user actively toggles them on.</div>
-              <div class="idea-box"><span class="arrow">→</span>Typing Nudges: If sentiment analysis detects highly aggressive typing, an interstitial pops up saying, 'This looks heated. Take a breath.'</div>
-              <div class="idea-box"><span class="arrow">→</span>Community Pre-Juries: Empower highly trusted users to pre-screen content from accounts with a history of borderline violations.</div>
-              <div class="idea-box"><span class="arrow">→</span>Dynamic Shielding: If an account suddenly receives a massive influx of mentions, replies auto-lock to 'Followers Only' to prevent dogpiling.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)">
-            04. How might we shift platform optimization away from dopamine-driven engagement?
-            <span class="acc-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <div class="accordion-inner">
-              <div class="idea-box"><span class="arrow">→</span>Friction Gestures: Require a complex gesture (like a two-finger long press) to 'Like' a post, forcing a micro-moment of intentionality.</div>
-              <div class="idea-box"><span class="arrow">→</span>Weighting Depth: Program the algorithm to weigh one thoughtful 50-word comment as 100x more valuable than a passive 'Like'.</div>
-              <div class="idea-box"><span class="arrow">→</span>Chronological Sanctuaries: Allow users to pin a purely chronological, algorithm-free feed of mutual friends as their default home screen.</div>
-              <div class="idea-box"><span class="arrow">→</span>Interaction Budgets: Give users a finite number of 'Likes' per day so they treat them as valuable currency rather than a reflexive tap.</div>
-              <div class="idea-box"><span class="arrow">→</span>Categorized Reactions: Replace the generic Like button with specific tags: 'Helpful,' 'Changed My Mind,' or 'Empathize.'</div>
-              <div class="idea-box"><span class="arrow">→</span>Sharing Reflection: When hitting share, prompt the user with: 'Why do you think your network needs to see this?' to reduce broadcasting.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)">
-            07. How might we decouple a platform’s business model from predatory attention-capture tactics?
-            <span class="acc-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <div class="accordion-inner">
-              <div class="idea-box"><span class="arrow">→</span>Ad-Free Learning Tiers: Users pay a small subscription fee for a feed optimized strictly for educational density, not retention.</div>
-              <div class="idea-box"><span class="arrow">→</span>B2B Data Pivot: Shift revenue from consumer ad-clicks to providing enterprise sentiment and cultural trend analytics.</div>
-              <div class="idea-box"><span class="arrow">→</span>Creator-Funded Networks: Users pay creators directly via micro-transactions; the platform takes a flat infrastructure cut.</div>
-              <div class="idea-box"><span class="arrow">→</span>B-Corp Mandates: Restructure the company as a Public Benefit Corporation, legally tying executive duty to user well-being.</div>
-              <div class="idea-box"><span class="arrow">→</span>Ethical Reach Pricing: Charge advertisers a premium to place ads in feeds that score high on user happiness and low on toxicity.</div>
-              <div class="idea-box"><span class="arrow">→</span>Premium Creation Tools: Give consumption away for free, monetize via highly advanced, AI-driven professional editing tools for creators.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)">
-            10. How might we prioritize information reliability and factual accuracy over raw engagement?
-            <span class="acc-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <div class="accordion-inner">
-              <div class="idea-box"><span class="arrow">→</span>Expert Verification Badges: Verify actual domain experts (doctors, climatologists) and algorithmically boost their replies.</div>
-              <div class="idea-box"><span class="arrow">→</span>Semantic Fact-Checking API: Automatically cross-reference viral claims against databases and attach un-removable context labels.</div>
-              <div class="idea-box"><span class="arrow">→</span>Downgrade Outrage: Train models to detect highly emotive, polarizing text and drastically reduce its organic reach.</div>
-              <div class="idea-box"><span class="arrow">→</span>Penalty Multipliers: Accounts frequently debunked by community fact-checkers suffer compounding, invisible algorithm downgrades.</div>
-              <div class="idea-box"><span class="arrow">→</span>Primary Source Boosts: Posts containing links to verified primary sources (.gov, .edu) receive an automatic visibility multiplier.</div>
-              <div class="idea-box"><span class="arrow">→</span>The 'Citation Needed' Button: Allow users to vote for a claim to be reviewed; if threshold is met, visibility is paused until verified.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)">
-            14. How might we reduce the urge to compare real lives with curated highlight reels?
-            <span class="acc-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <div class="accordion-inner">
-              <div class="idea-box"><span class="arrow">→</span>Reality Prompts: A gentle pop-up appears before publishing: 'Does this post represent your actual day, or a highlight?'</div>
-              <div class="idea-box"><span class="arrow">→</span>AI Edit Watermarks: Automatically detect heavily airbrushed images and permanently apply an 'Altered Image' badge.</div>
-              <div class="idea-box"><span class="arrow">→</span>Throttle Glamour: If screen-time on highly edited influencer pages spikes, actively pivot the algorithm to show casual posts from IRL friends.</div>
-              <div class="idea-box"><span class="arrow">→</span>Mandatory Dual-Camera: Create algorithmic incentives for 'BeReal' style posts that require showing the messy background behind the user.</div>
-              <div class="idea-box"><span class="arrow">→</span>Ban Beauty Filters: Completely remove face-altering, pore-smoothing filters from the app's native camera tools.</div>
-              <div class="idea-box"><span class="arrow">→</span>'Mundane Monday' Campaigns: Algorithmically boost posts on specific days where users are encouraged to share mundane or failing moments.</div>
-            </div>
-          </div>
-        </div>
-
+      <div class="card">
+        <h3 style="font-size: 1.1rem; line-height: 1.4;">02. How might we transform safety controls from a reactive mechanism into a proactive system?</h3>
+        <ul style="font-size: 0.95rem;">
+          <li><strong>Predictive DM Intercept:</strong> AI scans outbound messages for predatory patterns and blocks delivery.</li>
+          <li><strong>Mandatory Boundary Onboarding:</strong> Users must complete a gamified privacy and trigger-warning setup to access the feed.</li>
+          <li><strong>Default-Off Culture:</strong> Accounts default to maximum privacy until the user actively toggles settings on.</li>
+          <li><strong>Typing Nudges:</strong> Sentiment analysis detects aggressive typing and prompts: 'This looks heated. Take a breath.'</li>
+          <li><strong>Community Pre-Juries:</strong> Empower trusted users to pre-screen content from borderline accounts.</li>
+          <li><strong>Dynamic Shielding:</strong> If an account goes viral, replies auto-lock to 'Followers Only' to prevent dogpiling.</li>
+        </ul>
       </div>
+
+      <div class="card">
+        <h3 style="font-size: 1.1rem; line-height: 1.4;">04. How might we shift platform optimization away from dopamine-driven engagement?</h3>
+        <ul style="font-size: 0.95rem;">
+          <li><strong>Friction Gestures:</strong> Require a complex gesture (e.g., two-finger long press) to 'Like' a post.</li>
+          <li><strong>Weighting Depth:</strong> Program the algorithm to weigh one thoughtful comment as 100x more valuable than a 'Like'.</li>
+          <li><strong>Chronological Sanctuaries:</strong> Allow users to pin a chronological, algorithm-free feed of mutual friends.</li>
+          <li><strong>Interaction Budgets:</strong> Give users a finite number of 'Likes' per day to treat them as valuable currency.</li>
+          <li><strong>Categorized Reactions:</strong> Replace the Like button with tags: 'Helpful,' 'Changed My Mind,' or 'Empathize.'</li>
+          <li><strong>Sharing Reflection:</strong> Prompt users with: 'Why do you think your network needs to see this?' before sharing.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 style="font-size: 1.1rem; line-height: 1.4;">07. How might we decouple a platform’s business model from predatory attention-capture tactics?</h3>
+        <ul style="font-size: 0.95rem;">
+          <li><strong>Ad-Free Learning Tiers:</strong> Subscription fee for a feed optimized strictly for educational density.</li>
+          <li><strong>B2B Data Pivot:</strong> Shift revenue to providing enterprise sentiment and cultural trend analytics.</li>
+          <li><strong>Creator-Funded Networks:</strong> Users pay creators directly via micro-transactions; platform takes a flat cut.</li>
+          <li><strong>B-Corp Mandates:</strong> Restructure as a Public Benefit Corporation, legally tying duty to user well-being.</li>
+          <li><strong>Ethical Reach Pricing:</strong> Charge advertisers a premium to place ads in high-happiness, low-toxicity feeds.</li>
+          <li><strong>Premium Creation Tools:</strong> Monetize via highly advanced, AI-driven professional editing tools for creators.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 style="font-size: 1.1rem; line-height: 1.4;">10. How might we prioritize information reliability and factual accuracy over raw engagement?</h3>
+        <ul style="font-size: 0.95rem;">
+          <li><strong>Expert Verification Badges:</strong> Verify domain experts and algorithmically boost their replies.</li>
+          <li><strong>Semantic Fact-Checking API:</strong> Cross-reference claims against databases and attach context labels.</li>
+          <li><strong>Downgrade Outrage:</strong> Detect highly emotive, polarizing text and drastically reduce its organic reach.</li>
+          <li><strong>Penalty Multipliers:</strong> Accounts frequently debunked suffer compounding algorithm downgrades.</li>
+          <li><strong>Primary Source Boosts:</strong> Posts with verified primary sources (.gov, .edu) get a visibility multiplier.</li>
+          <li><strong>'Citation Needed' Button:</strong> Users vote to review claims; visibility is paused until verified.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 style="font-size: 1.1rem; line-height: 1.4;">14. How might we reduce the urge to compare real lives with curated highlight reels?</h3>
+        <ul style="font-size: 0.95rem;">
+          <li><strong>Reality Prompts:</strong> Pop-up before publishing: 'Does this post represent your actual day, or a highlight?'</li>
+          <li><strong>AI Edit Watermarks:</strong> Automatically detect altered images and permanently apply an 'Altered Image' badge.</li>
+          <li><strong>Throttle Glamour:</strong> Spike in influencer screen-time triggers algorithm to show casual posts from IRL friends.</li>
+          <li><strong>Mandatory Dual-Camera:</strong> Algorithmic incentives for posts that require showing the messy background.</li>
+          <li><strong>Ban Beauty Filters:</strong> Completely remove face-altering filters from the app's native camera tools.</li>
+          <li><strong>'Mundane Monday' Campaigns:</strong> Boost posts where users share mundane, boring, or failing moments.</li>
+        </ul>
+      </div>
+
     </div>
+
   </section>
   
   <section id="solution">
